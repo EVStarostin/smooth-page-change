@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
+    initSmoothPageTransition();
+}
+
+function initSmoothPageTransition() {
     var container = document.querySelector('.container');
     var nav = document.querySelector('.nav');
     var href;
