@@ -1,4 +1,4 @@
-window.addEventListener('load', init);
+document.addEventListener('DOMContentLoaded', init);
 
 function init() {
     var container = document.querySelector('.container');
@@ -6,10 +6,15 @@ function init() {
     var href;
 
     nav.addEventListener('click', handleClick);
-    container.classList.add('container--visible');
+    
+    requestAnimationFrame(function() {
+        container.classList.add('container--visible');
+    });
 
     function handleTransitionend(e) {
-        location.href = href;
+        if (e.propertyName === 'opacity') {
+            location.href = href;
+        }
     }
 
     function handleClick(e) {
