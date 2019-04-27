@@ -17,15 +17,17 @@ function initSmoothPageChange() {
     });
 
     function handleClick(e) {
-        e.preventDefault();
         href = e.target.href;
     
         if (!href) {
             return;
         }
+        
+        e.preventDefault();
     
         container.addEventListener('transitionend', handleTransitionend);
-        container.classList.add('container--blurred');   
+        container.classList.add('container--blurred'); 
+        
     }
 
     function handleTransitionend(e) {
