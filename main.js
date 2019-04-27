@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
-    initSmoothPageTransition();
+    initSmoothPageChange();
 }
 
 function initSmoothPageTransition() {
