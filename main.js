@@ -4,7 +4,7 @@ function init() {
     initSmoothPageChange();
 }
 
-function initSmoothPageTransition() {
+function initSmoothPageChange() {
     var container = document.querySelector('.container');
     var nav = document.querySelector('.nav');
     var href;
