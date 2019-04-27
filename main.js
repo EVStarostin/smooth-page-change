@@ -7,8 +7,9 @@ function init() {
 
     nav.addEventListener('click', handleClick);
     
+    container.classList.add('container--blurred');
     requestAnimationFrame(function() {
-        container.classList.add('container--visible');
+        container.classList.remove('container--blurred');
     });
 
     function handleClick(e) {
@@ -20,7 +21,7 @@ function init() {
         }
     
         container.addEventListener('transitionend', handleTransitionend);
-        container.classList.remove('container--visible');   
+        container.classList.add('container--blurred');   
     }
 
     function handleTransitionend(e) {
